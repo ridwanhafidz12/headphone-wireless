@@ -1,0 +1,246 @@
+/* *{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background: #4d4d4d;
+    height: 80px;
+    position: relative;
+} */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+:root{
+	--bg-color: #101113;
+	--text-color: #fff;
+	--main-color: #34e7f8;
+	--other-color: #fcfcfc;
+	--h1-font: 6rem;
+	--p-font: 1rem;
+}
+body{
+	background: radial-gradient(50.53% 50.53% at 50.23% 49.47%, #414d59 0%, #1d2631 100%);
+	color: var(--text-color);
+}
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 8%;
+	transition: all .55s ease;
+	background: transparent;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	color: var(--text-color);
+	font-size: 28px;
+	font-weight: bold;
+}
+.logo i{
+	color: var(--main-color);
+	font-size: 32px;
+	margin-right: 5px;
+}
+.navbar{
+	display: flex;
+}
+.navbar a{
+	color: var(--other-color);
+	font-size: var(--p-font);
+	font-weight: 500;
+	margin: 0 30px;
+	transition: all .55s ease;
+}
+.navbar a:hover{
+	color: var(--main-color);
+}
+.navbar a.active{
+	color: var(--main-color);
+}
+.header-icons{
+	display: flex;
+	align-items: center;
+}
+#menu-icon{
+	font-size: 35px;
+	color: var(--text-color);
+	z-index: 10001;
+	cursor: pointer;
+}
+.header-icons i{
+	margin-right: 25px;
+	font-size: 28px;
+	cursor: pointer;
+	transition: all .55s ease;
+}
+.header-icons i:hover{
+	transform: translateY(-5px);
+	color: var(--main-color);
+}
+
+section{
+	padding: 0 15%;
+}
+
+@media (max-width: 890px){
+	.navbar{
+		position: absolute;
+		top: 100%;
+		right: -200%;
+		width: 200px;
+		height: 20vh;
+		background: var(--main-color);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 20px;
+		border-radius: 4px;
+		transition: all .55s ease;
+	}
+	.navbar a{
+		display: block;
+		margin: 4px 0;
+		transition: all .45s ease;
+	}
+	.navbar a:hover{
+		transform: translateY(5px);
+		color: var(--text-color);
+	}
+	.navbar a.active{
+		color: var(--text-color);
+	}
+	.navbar.open{
+		right: 2%;
+	}
+}
+
+.icon {
+    cursor: pointer;
+    margin-right: 50px;
+    line-height: 60px;
+}
+.icon span {
+    background: #f00;
+    padding: 7px;
+        border-radius: 50%;
+        color: #fff;
+        vertical-align: top;
+        margin-left: -25px;
+}
+.icon img {
+    display: inline-block;
+    width: 40px;
+    margin-top: 20px;
+}
+.icon:hover {
+    opacity: .7;
+}
+.logo {
+    flex: 1;
+    margin-left: 50px;
+    color: #eee;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.notifi-box {
+    width: 300px;
+    height: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 63px;
+    right: 35px;
+    transition: 1s opacity, 250ms height ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notifi-box h2 {
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #999;
+}
+
+.notifi-box span h2 {
+    color: #f00;
+}  
+.notifi-item {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 15px 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.notifi-item hover {
+    background-color: #eee;
+}
+.notifi-item img {
+    display: block;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.notifi-item .text h4 {
+    color: #777;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.notifi-item .text p {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.main-color  {
+    background-color: #434243 !important;
+}
+    /* background-color: #65C1C1 !important; */
+
+
+.banner{
+    height: 105vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../dist/images/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hovered-card{
+    transition: .3s;
+}
+
+.hovered-card:hover{
+    transform: scale(1.1);
+}
+
+.icon-service{
+    width: 90px;
+    height: 90px;
+    border: solid #fff 2px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.content-subcribe{
+    background-color: rgba(0, 0, 0, 0.3);
+}
